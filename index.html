@@ -59,17 +59,7 @@
 
     <script>
 
-        // const submitBtn = document.getElementById('submitBtn');
-        // submitBtn.addEventListener('click', function(){
-        //     if(){
-        //         const notify1 = document.getElementById('notify1');
-        //         notify1.style.display = 'block';
-        //     }
-        //     else{
-        //         const notify2 = document.getElementById('notify2');
-        //         notify2.style.display = 'block';
-        //     }
-        // })
+    
         
         document.getElementById('generateBtn').addEventListener('click',function(){
             var val = Math.round(1000 + Math.random() * 9000);
@@ -127,6 +117,27 @@
             number = number + e.target.textContent;
             totalNumber.textContent = number;
             document.getElementById("write-display").value = number;
+        })
+
+
+
+        document.getElementById('submitBtn').addEventListener('click', function(){
+
+            var lastValue = document.getElementById("write-display").value;
+            var generateValue = document.getElementById('random-display').value;
+
+            if(lastValue!='' && generateValue!=''){
+                if(lastValue === generateValue){
+                const notify2 = document.getElementById('notify2');
+                notify1.style.display = 'none';
+                notify2.style.display = 'block';
+            }
+            else{
+                notify2.style.display = 'none';
+                const notify1 = document.getElementById('notify1');
+                notify1.style.display = 'block';
+            }
+            }
         })
 
         document.getElementById('cBtn').addEventListener('click', function () {
