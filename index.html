@@ -18,28 +18,28 @@
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                    <input id="write-display" class="form-control" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div class="button">7</div>
-                              <div class="button">8</div>
-                              <div class="button">9</div>
+                              <div id="sevenBtn" class="button">7</div>
+                              <div id="eightBtn" class="button">8</div>
+                              <div id="nineBtn" class="button">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">4</div>
-                              <div class="button">5</div>
-                              <div class="button">6</div>
+                              <div id="fourBtn" class="button">4</div>
+                              <div id="fiveBtn" class="button">5</div>
+                              <div id="sixBtn" class="button">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">1</div>
-                              <div class="button">2</div>
-                              <div class="button">3</div>
+                              <div id="oneBtn" class="button">1</div>
+                              <div id="twoBtn" class="button">2</div>
+                              <div id="threeBtn" class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div class="button"> < </div>
+                                <div id="zeroBtn" class="button">0</div>
+                                <div id="cBtn" class="button">C</div>
                             </div>
                             <div>
                                 <button id="submitBtn" type="submit" class="submit-btn">Submit</button>
@@ -54,13 +54,87 @@
             <p id="notify2" class="notify">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
+    </div>
+    </div>
 
     <script>
+
+        // const submitBtn = document.getElementById('submitBtn');
+        // submitBtn.addEventListener('click', function(){
+        //     if(){
+        //         const notify1 = document.getElementById('notify1');
+        //         notify1.style.display = 'block';
+        //     }
+        //     else{
+        //         const notify2 = document.getElementById('notify2');
+        //         notify2.style.display = 'block';
+        //     }
+        // })
         
         document.getElementById('generateBtn').addEventListener('click',function(){
             var val = Math.round(1000 + Math.random() * 9000);
             document.getElementById('random-display').value = val;
         })
+
+        var totalNumber = document.getElementById("write-display");
+        var number = '';
+        document.getElementById('sevenBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('eightBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('nineBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('fourBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('fiveBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('sixBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('oneBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('twoBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('threeBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+        document.getElementById('zeroBtn').addEventListener('click', function (e) {
+            number = number + e.target.textContent;
+            totalNumber.textContent = number;
+            document.getElementById("write-display").value = number;
+        })
+
+        document.getElementById('cBtn').addEventListener('click', function () {
+            var totalNumber = document.getElementById("write_display");
+            number = "";
+            document.getElementById("write-display").value = number;
+        })
+        
 
     </script>
 
