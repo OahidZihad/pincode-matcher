@@ -37,7 +37,7 @@
                               <div id="threeBtn" class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"> < </div>
+                                <div id="lastBtnClear" class="button"> < </div>
                                 <div id="zeroBtn" class="button">0</div>
                                 <div id="cBtn" class="button">C</div>
                             </div>
@@ -141,10 +141,23 @@
         })
 
         document.getElementById('cBtn').addEventListener('click', function () {
-            var totalNumber = document.getElementById("write_display");
+            // var totalNumber = document.getElementById("write-display");
             number = "";
             document.getElementById("write-display").value = number;
         })
+
+        document.getElementById('lastBtnClear').addEventListener('click', function(){
+            var lastNumber = document.getElementById('write-display').value;
+            var lastNumberValue = Math.floor(lastNumber/10);
+            document.getElementById('write-display').value = lastNumberValue;
+            number = '';
+
+            var lastValue = document.getElementById("write-display").value;
+            if(lastValue == 0){
+                document.getElementById("write-display").value = number;
+            }
+        })
+
         
 
     </script>
